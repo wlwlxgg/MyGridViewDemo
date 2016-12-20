@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="0.0dip"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/grid_view"
+        >
+
+        <ImageView
+            android:id="@+id/image_view_grid_view"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="12dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/text_view_grid_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_view_grid_view"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:maxLines="2"
+            android:textColor="#514e57"
+            android:textSize="12.5sp" />
+
+        <ImageView
+            android:id="@+id/delete_application"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/delete_application"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/add_application"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/add_application"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/selected_application"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/selected_application"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

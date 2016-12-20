@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3f3">
+
+    <RelativeLayout
+        android:id="@+id/application_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#ffffff"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/application_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp">
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/comm_nav_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="全部"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/application_manage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="#00000000"
+                android:text="管理"
+                android:textColor="#f3830b"
+                android:textSize="14sp"
+                android:clickable="false"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/application_complete"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="#00000000"
+                android:text="完成"
+                android:textColor="#f3830b"
+                android:textSize="14sp"
+                android:clickable="false"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/application_title">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f3f3f3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view">
+
+        <com.example.wlwlxgg.mygridviewdemo.MyScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.example.wlwlxgg.mygridviewdemo.MyGridView
+                    android:id="@+id/application_gridview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="317dp"
+                    android:horizontalSpacing="0.0dip"
+                    android:listSelector="@null"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="0.0dip" />
+
+
+                <RelativeLayout
+                    android:id="@+id/application_rl_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="#ffffff">
+
+                    <RelativeLayout
+                        android:id="@+id/application_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="常用服务"
+                            android:textColor="#373737"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_above="@id/application_common"
+                        android:background="#e5e5e5" />
+
+                    <View
+                        android:id="@+id/v_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/application_common"
+                        android:background="#e5e5e5" />
+
+                    <com.example.wlwlxgg.mygridviewdemo.MyGridView
+                        android:id="@+id/application_gridview_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/v_1"
+                        android:horizontalSpacing="0.0dip"
+                        android:listSelector="@null"
+                        android:numColumns="4"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="0.0dip" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/application_rl_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/application_rl_1"
+                    android:layout_marginTop="8dp"
+                    android:background="#ffffff">
+
+                    <RelativeLayout
+                        android:id="@+id/application_study"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="学习与知识管理"
+                            android:textColor="#373737"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_above="@id/application_study"
+                        android:background="#e5e5e5" />
+
+                    <View
+                        android:id="@+id/v_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/application_study"
+                        android:background="#e5e5e5" />
+
+                    <com.example.wlwlxgg.mygridviewdemo.MyGridView
+                        android:id="@+id/application_gridview_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="317dp"
+                        android:layout_below="@id/v_2"
+                        android:horizontalSpacing="0.0dip"
+                        android:listSelector="@null"
+                        android:numColumns="4"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="0.0dip" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/application_rl_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/application_rl_2"
+                    android:layout_marginTop="8dp"
+                    android:background="#ffffff">
+
+                    <RelativeLayout
+                        android:id="@+id/application_staffservice"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="员工服务"
+                            android:textColor="#373737"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_above="@id/application_staffservice"
+                        android:background="#e5e5e5" />
+
+                    <View
+                        android:id="@+id/v_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/application_staffservice"
+                        android:background="#e5e5e5" />
+
+                    <com.example.wlwlxgg.mygridviewdemo.MyGridView
+                        android:id="@+id/application_gridview_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="317dp"
+                        android:layout_below="@id/v_3"
+                        android:horizontalSpacing="0.0dip"
+                        android:listSelector="@null"
+                        android:numColumns="4"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="0.0dip" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/application_rl_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/application_rl_3"
+                    android:layout_marginTop="8dp"
+                    android:background="#ffffff">
+
+                    <RelativeLayout
+                        android:id="@+id/application_officeservice"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="办公服务"
+                            android:textColor="#373737"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_above="@id/application_officeservice"
+                        android:background="#e5e5e5" />
+
+                    <View
+                        android:id="@+id/v_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/application_officeservice"
+                        android:background="#e5e5e5" />
+
+                    <com.example.wlwlxgg.mygridviewdemo.MyGridView
+                        android:id="@+id/application_gridview_4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="317dp"
+                        android:layout_below="@id/v_4"
+                        android:horizontalSpacing="0.0dip"
+                        android:listSelector="@null"
+                        android:numColumns="4"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="0.0dip" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/application_rl_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/application_rl_4"
+                    android:layout_marginTop="8dp"
+                    android:background="#ffffff">
+
+                    <RelativeLayout
+                        android:id="@+id/application_peoplemanage"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="人事管理"
+                            android:textColor="#373737"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_above="@id/application_peoplemanage"
+                        android:background="#e5e5e5" />
+
+                    <View
+                        android:id="@+id/v_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/application_peoplemanage"
+                        android:background="#e5e5e5" />
+
+                    <com.example.wlwlxgg.mygridviewdemo.MyGridView
+                        android:id="@+id/application_gridview_5"
+                        android:layout_width="fill_parent"
+                        android:layout_height="317dp"
+                        android:layout_below="@id/v_5"
+                        android:horizontalSpacing="0.0dip"
+                        android:listSelector="@null"
+                        android:numColumns="4"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="0.0dip" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/application_rl_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/application_rl_5"
+                    android:layout_marginTop="8dp"
+                    android:background="#ffffff">
+
+                    <RelativeLayout
+                        android:id="@+id/application_moneymanage"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="财务管理"
+                            android:textColor="#373737"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_above="@id/application_moneymanage"
+                        android:background="#e5e5e5" />
+
+                    <View
+                        android:id="@+id/v_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/application_moneymanage"
+                        android:background="#e5e5e5" />
+
+                    <com.example.wlwlxgg.mygridviewdemo.MyGridView
+                        android:id="@+id/application_gridview_6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="317dp"
+                        android:layout_below="@id/v_6"
+                        android:horizontalSpacing="0.0dip"
+                        android:listSelector="@null"
+                        android:numColumns="4"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="0.0dip" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/application_rl_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/application_rl_6"
+                    android:layout_marginTop="8dp"
+                    android:background="#ffffff">
+
+                    <RelativeLayout
+                        android:id="@+id/application_yunying"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="运营支撑"
+                            android:textColor="#373737"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_above="@id/application_yunying"
+                        android:background="#e5e5e5" />
+
+                    <View
+                        android:id="@+id/v_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/application_yunying"
+                        android:background="#e5e5e5" />
+
+                    <com.example.wlwlxgg.mygridviewdemo.MyGridView
+                        android:id="@+id/application_gridview_7"
+                        android:layout_width="fill_parent"
+                        android:layout_height="317dp"
+                        android:layout_below="@id/v_7"
+                        android:horizontalSpacing="0.0dip"
+                        android:listSelector="@null"
+                        android:numColumns="4"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="0.0dip" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/application_rl_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/application_rl_7"
+                    android:layout_marginTop="8dp"
+                    android:background="#ffffff">
+
+                    <RelativeLayout
+                        android:id="@+id/application_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="数据分析类"
+                            android:textColor="#373737"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_above="@id/application_data"
+                        android:background="#e5e5e5" />
+
+                    <View
+                        android:id="@+id/v_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/application_data"
+                        android:background="#e5e5e5" />
+
+                    <com.example.wlwlxgg.mygridviewdemo.MyGridView
+                        android:id="@+id/application_gridview_8"
+                        android:layout_width="fill_parent"
+                        android:layout_height="317dp"
+                        android:layout_below="@id/v_8"
+                        android:horizontalSpacing="0.0dip"
+                        android:listSelector="@null"
+                        android:numColumns="4"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="0.0dip" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/application_rl_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/application_rl_8"
+                    android:layout_marginTop="8dp"
+                    android:background="#ffffff">
+
+                    <RelativeLayout
+                        android:id="@+id/application_util"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="常用工具"
+                            android:textColor="#373737"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_above="@id/application_util"
+                        android:background="#e5e5e5" />
+
+                    <View
+                        android:id="@+id/v_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/application_util"
+                        android:background="#e5e5e5" />
+
+                    <com.example.wlwlxgg.mygridviewdemo.MyGridView
+                        android:id="@+id/application_gridview_9"
+                        android:layout_width="fill_parent"
+                        android:layout_height="317dp"
+                        android:layout_below="@id/v_9"
+                        android:horizontalSpacing="0.0dip"
+                        android:listSelector="@null"
+                        android:numColumns="4"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="0.0dip" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </com.example.wlwlxgg.mygridviewdemo.MyScrollView>
+    </RelativeLayout>
+</RelativeLayout>
